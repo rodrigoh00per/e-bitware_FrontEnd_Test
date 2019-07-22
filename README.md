@@ -1,27 +1,22 @@
-# Examen
+#ESTE ES EL FRONT END HECHO EN ANGULAR PARA MANEJAR EL APARTADO 1 Y 2 DEL EXAMEN 
+SE HIZO EL DEPLOY EN SURGE.SH Y LA LIGA ES LA SIGUIENTE http://amusing-frogs.surge.sh/#/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
+#EL APARTADO UNO ( EXAMEN BASE)
 
-## Development server
+EL ARCHIVO CON LA CLASE DE PERSONA SE PUSO EN  SRC/APP/CLASSES/PERSONA.TS,EL CUAL SE CREARON LOS TRES OBJETOS DENTRO DEL COMPONENTE <app-prueba-persona>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+#APARTADO DOS ( Examen Servicios REST)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+EN ESTE APARTADO DEBIDO A QUE LA LIGA QUE SE DIO NO SE PUEDE ACCEDER YA QUE ES UNA IP PRIVADA ,SE GENERO UNA BACKEND REPLICANDO LOS CASOS A RESOLVER.
+https://examenrestbitware.herokuapp.com/ ESTE BACKEND ESTA ACTUALMENTE  DEPLOYADO EN HEROKU.
 
-## Build
+LOS ENDPOINTS MANTIENEN LA MISMA NOMENCLATURA QUE EN EL EJEMPLO.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+LA PARTE DEL CONSUMO DEL SERVICIO REST SE MANEJO ATRAVES DE SERVICES ,EN ESTE CASO EN EL ARCHIVO nutri-net.services.ts(/src/app/services/)
 
-## Running unit tests
+EL COMPONENTE QUE SE UTILIZO ES EL <app-prueba-rest>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
