@@ -1,0 +1,149 @@
+<!-- 2.- realiza un post  /POST/NutriNET/Cliente -->
+<br>
+<div class="ejercicio1_post">
+    <h4 style="text-decoration:underline">
+        1.- Realizar un POST a /NutriNET/Cliente
+      </h4>
+      <p>Con la siguiente estructura JSON (Diferentes Valores)
+          
+          "Nombre": "Juan",
+          "Apellidos": "Perez Hernandez", "Nombre_Usuario": "Ju", "Correo_Electronico": "jperez@hotmail.com", "Contraseña": "juanitoperez"
+          
+          Regresa en Pantalla un Alert del número de ID del Cliente (CVE_MENSAJE).</p>
+  <form #miformulario="ngForm" (ngSubmit)="registrarCliente(miformulario)">
+    <div class="form-group">
+      <label>Nombre</label>
+      <input
+        type="text"
+        name="Nombre"
+        class="form-control"
+        placeholder="Nombre"
+        ngModel
+      />
+    </div>
+    <div class="form-group">
+      <label> Apellidos</label>
+      <input
+        type="text"
+        name="Apellidos"
+        class="form-control"
+        placeholder="Apellidos" ngModel
+      />
+    </div>
+    <div class="form-group">
+      <label>Nombre_Usuario</label>
+      <input type="text" class="form-control" name="Nombre_Usuario" placeholder="Nombre de Usuario" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Correo Electronico</label>
+      <input
+        type="email" name="Correo_Electronico"
+        class="form-control"
+        placeholder="Correo Electronico" ngModel
+      />
+    </div>
+    <div class="form-group">
+      <label>Contraseña</label>
+      <input type="text" name="Contrasena" class="form-control" placeholder="Contraseña" ngModel />
+    </div>
+    <button style="margin-left:1rem" type="submit" class="btn btn-primary">
+      Realizar Peticion
+    </button>
+  </form>
+</div>
+<br />
+<!-- 2.- realiza un get  /GET/NutriNET/Cliente -->
+<div class="ejercicio2_get">
+  <div *ngIf="sinData === true">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <div *ngIf="sinData === false">
+    <h4 style="text-decoration:underline">
+      2.- Realizar un GET a /NutriNET/Cliente
+    </h4>
+    <p>Recibe el resultado como JSON y muéstralo en una tabla HTML</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellidos</th>
+          <th scope="col">Nombre_Usuario</th>
+          <th scope="col">Correo Electronico</th>
+          <th scope="col">Contraseña</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>{{ this.Cliente.Nombre }}</td>
+          <td>{{ this.Cliente.Apellidos }}</td>
+          <td>{{ this.Cliente.Nombre_Usuario }}</td>
+          <td>{{ this.Cliente.Correo_Electronico }}</td>
+          <td>{{ this.Cliente.Contrasena }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br>
+<!-- 2.- realiza un PUT  /  PUT/NutriNET/Cliente 59 -->
+<div class="ejercicio3_put">
+    <h4 style="text-decoration:underline">
+        3. Realiza el siguiente PUT, para modificar el peso y la estatura del Cliente 59
+      </h4>
+      <p>
+          "Edad": 39
+          "Estatura": 1.80 "Peso": 60 "GEB": 1500
+          
+          Regresa en Pantalla un Alert del número de ID del Cliente (CVE_MENSAJE).</p>
+  <form #miformularioput="ngForm" (ngSubmit)="modificarCliente(miformularioput)">
+    <div class="form-group">
+      <label>ID</label>
+      <input 
+        type="text"
+        name="id"
+        class="form-control"
+        placeholder="id"
+        ngModel="59" 
+      />
+    </div>
+    <div class="form-group">
+      <label> Edad</label>
+      <input
+        type="number"
+        name="Edad"
+        class="form-control"
+        placeholder="Edad" ngModel=38
+      />
+    </div>
+    <div class="form-group">
+        <label> Estatura</label>
+        <input
+          type="text"
+          name="Estatura"
+          class="form-control"
+          placeholder="Estatura" ngModel=1.80
+        />
+      </div>
+    <div class="form-group">
+      <label>Peso</label>
+      <input type="text" class="form-control" name="Peso" placeholder="Peso" ngModel="64" />
+    </div>
+    <div class="form-group">
+      <label>GEB</label>
+      <input
+        type="text" name="GEB"
+        class="form-control"
+        placeholder="GEB" ngModel=1455
+      />
+    </div>
+   
+    <button style="margin-left:1rem" type="submit" class="btn btn-primary">
+      Realizar Peticion
+    </button>
+  </form>
+</div>
+<br>

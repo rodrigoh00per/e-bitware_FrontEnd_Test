@@ -1,0 +1,77 @@
+<form #miformulario="ngForm" (ngSubmit)="calcular(miformulario)">
+        <div class="form-group">
+          <label>Nombre</label>
+          <input
+            type="text"
+            name="nombre"
+            class="form-control"
+            placeholder="Nombre"
+            ngModel
+          />
+        </div>
+        <div class="form-group">
+          <label> Edad</label>
+          <input
+            type="text"
+            name="edad"
+            class="form-control"
+            placeholder="Edad" ngModel
+          />
+        </div>
+        <div class="form-group">
+          <label>Sexo</label>
+          <input type="text" class="form-control" name="sexo" placeholder="Sexo" ngModel />
+        </div>
+        <div class="form-group">
+          <label>Peso</label>
+          <input
+            type="text" name="peso"
+            class="form-control"
+            placeholder="peso" ngModel
+          />
+        </div>
+        <div class="form-group">
+          <label>Altura</label>
+          <input type="text" name="altura" class="form-control" placeholder="Altura" ngModel />
+        </div>
+        <button style="margin-left:1rem" type="submit" class="btn btn-primary">
+         Calcular
+        </button>
+      </form>
+
+      <hr>
+<div *ngIf="this.hayInfo===true">
+      <h4 style="text-decoration: underline">Objeto 1</h4>
+      <h5 >IMC:</h5>
+      <p *ngIf="personaObj1.calcularIMC() === -1">Falta Peso</p>
+      <p *ngIf="personaObj1.calcularIMC() === 0">Peso Normal</p>
+      <p *ngIf="personaObj1.calcularIMC() === 1">SobrePeso</p>
+      <h5>Mayor de Edad:</h5>
+      <p *ngIf="personaObj1.esMayorDeEdad()===true">SI</p>
+      <p *ngIf="personaObj1.esMayorDeEdad()===false">NO</p>
+      <h5>Informacion del Objeto</h5>
+      <p>{{personaObj1.toString()}}</p>
+      <br>
+      <h4 style="text-decoration: underline">Objeto 2</h4>
+      <h5 >IMC:</h5>
+      <p *ngIf="personaObj2.calcularIMC() === -1">Falta Peso</p>
+      <p *ngIf="personaObj2.calcularIMC() === 0">Peso Normal</p>
+      <p *ngIf="personaObj2.calcularIMC() === 1">SobrePeso</p>
+      <h5>Mayor de Edad:</h5>
+      <p *ngIf="personaObj2.esMayorDeEdad()===true">SI</p>
+      <p *ngIf="personaObj2.esMayorDeEdad()===false">NO</p>
+      <h5>Informacion del Objeto</h5>
+      <p>{{personaObj2.toString()}}</p>
+      <br>
+      <h4 style="text-decoration: underline">Objeto 3</h4>
+      <h5 >IMC:</h5>
+      <p *ngIf="personaObj3.calcularIMC() === -1">Falta Peso</p>
+      <p *ngIf="personaObj3.calcularIMC() === 0">Peso Normal</p>
+      <p *ngIf="personaObj3.calcularIMC() === 1">SobrePeso</p>
+      <h5>Mayor de Edad:</h5>
+      <p *ngIf="personaObj3.esMayorDeEdad()===true">SI</p>
+      <p *ngIf="personaObj3.esMayorDeEdad()===false">NO</p>
+      <h5>Informacion del Objeto</h5>
+      <p>{{personaObj3.toString()}}</p>
+
+    </div>
